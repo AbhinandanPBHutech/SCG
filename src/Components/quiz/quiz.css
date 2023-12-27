@@ -1,0 +1,44 @@
+.app-container {
+  text-align: center;
+  margin: 4rem auto;
+  box-shadow: 2px 2px 4px gray;
+  width: 60%;
+  padding: 1rem;
+}
+.question {
+  background-color: rgb(43, 118, 226, 0.4);
+  padding-block: 1rem;
+  text-align: left;
+  padding-inline: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li.selected {
+  background-color: #e0e0e0;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-inline: 50px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: no-drop;
+}
