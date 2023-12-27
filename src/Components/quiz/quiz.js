@@ -83,6 +83,21 @@ function QuizApp() {
     setShowResults(true);
   };
 
+  const calculateScore = () => {
+    let score = 0;
+    questionsData.forEach((question, index) => {
+      if (
+        question.correctAnswers.length === selectedAnswers[index].length &&
+        question.correctAnswers.every((ans) =>
+          selectedAnswers[index].includes(ans)
+        )
+      ) {
+        score++;
+      }
+    });
+    return score;
+  };
+
   return (
     <div className="app-container">
       {!showResults ? (
@@ -126,6 +141,9 @@ function QuizApp() {
       ) : (
         <div>
           <h2>Quiz Results</h2>
+          <p>
+            Your Score: {calculateScore()} / {questionsData.length}
+          </p>
           <ul>
             {questionsData.map((question, index) => (
               <div key={index}>
